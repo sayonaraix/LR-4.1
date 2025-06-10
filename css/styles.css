@@ -1,0 +1,490 @@
+/* Базові скидання стилів та типографія */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Враховує відступи та рамки у розмірі елемента */
+}
+
+body {
+    font-family: 'Raleway', sans-serif; /* Основний шрифт тексту */
+    background-color: #000; /* Чорний фон сторінки */
+    color: #fff; /* Білий колір тексту за замовчуванням */
+    line-height: 1.6; /* Міжрядковий інтервал */
+    scroll-behavior: smooth; /* Плавна прокрутка сторінки */
+}
+
+.container {
+    max-width: 1200px; /* Максимальна ширина контейнера */
+    margin: 0 auto; /* Центрування контейнера по горизонталі */
+    padding: 0 20px; /* Відступи по боках для консистентності */
+}
+
+/* Заголовок (Header) - Використання Flexbox для розташування */
+.main-header {
+    background: url("../images/banner.png") center/cover no-repeat; /* Фонове зображення шапки */
+    min-height: 500px; /* Мінімальна висота шапки */
+    display: flex; /* Використання Flexbox */
+    flex-direction: column; /* Елементи розташовуються вертикально */
+    justify-content: space-between; /* Розподіл простору між навігацією та герой-секцією */
+    position: relative;
+}
+
+.navbar {
+    display: flex; /* Використання Flexbox для елементів навігаційної панелі */
+    justify-content: space-between; /* Розподіл простору між логотипом, посиланнями та кошиком */
+    align-items: center; /* Центрування елементів по вертикалі */
+    padding: 20px 0;
+    width: 100%; /* Забезпечує, що навігаційна панель займає всю ширину контейнера */
+}
+
+.nav-links {
+    list-style: none; /* Видалення маркерів списку */
+    display: flex; /* Використання Flexbox для посилань навігації */
+    gap: 40px; /* Збільшений проміжок між посиланнями */
+}
+
+.nav-links a {
+    text-decoration: none; /* Видалення підкреслення */
+    color: #fff; /* Колір посилань */
+    font-size: 1.1em;
+    transition: color 0.3s ease; /* Плавна зміна кольору при наведенні */
+}
+
+.nav-links a:hover {
+    color: #ffd700; /* Приклад кольору при наведенні (золотий) */
+}
+
+.logo {
+    font-family: 'Oxygen', sans-serif; /* Шрифт логотипу */
+    font-size: 36px; /* Більший розмір логотипу */
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase; /* Великі літери */
+}
+
+.cart-icon img {
+    width: 30px; /* Розмір іконки кошика */
+    height: auto;
+}
+
+.hero {
+    flex-grow: 1; /* Дозволяє контенту герой-секції займати весь доступний простір */
+    display: flex; /* Використання Flexbox для центрування контенту герой-секції */
+    align-items: center; /* Центрування по вертикалі */
+    justify-content: center; /* Центрування по горизонталі */
+    text-align: center;
+    padding-bottom: 80px; /* Відступ знизу */
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний фон для тексту */
+    padding: 20px 40px;
+    border-radius: 10px; /* Заокруглені кути */
+}
+
+.hero-content h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Тінь для тексту */
+}
+
+.hero-subtitle {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Секція "Про нас" (About Us) - Використання Flexbox для розташування */
+.about-us {
+    display: flex; /* Використання Flexbox для контенту та зображень */
+    justify-content: space-between; /* Розподіл простору між текстовим блоком та зображеннями */
+    align-items: flex-start; /* Вирівнювання елементів по верхньому краю */
+    padding: 80px 0;
+    gap: 40px; /* Проміжок між текстовим блоком та зображеннями */
+    flex-wrap: wrap; /* Дозволяє елементам переноситися на менших екранах */
+}
+
+.about-content {
+    flex: 1; /* Дозволяє контенту розтягуватися */
+    max-width: 50%; /* Контроль ширини текстового блоку */
+    min-width: 300px; /* Забезпечує, щоб блок не був занадто вузьким */
+}
+
+.about-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-images {
+    flex: 1; /* Дозволяє зображенням розтягуватися */
+    display: flex; /* Використання Flexbox для розміщення зображень */
+    flex-direction: column; /* Зображення розташовуються вертикально */
+    gap: 20px; /* Проміжок між зображеннями */
+    align-items: flex-end; /* Вирівнювання зображень по правому краю */
+    min-width: 300px; /* Забезпечує, щоб блок не був занадто вузьким */
+}
+
+.about-main-img {
+    width: 100%;
+    max-width: 450px; /* Більше основне зображення */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Секція "Новинки" (New Arrivals) - Використання CSS Grid для елементів товару */
+.new-arrivals {
+    padding: 80px 0;
+}
+
+.new-arrivals-header {
+    display: flex; /* Використання Flexbox для елементів заголовка */
+    align-items: center; /* Центрування по вертикалі */
+    margin-bottom: 40px;
+    gap: 20px; /* Проміжок між заголовком та тегом "NEW" */
+}
+
+.new-arrivals-header h3 {
+    font-size: 2.8em;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.new-tag {
+    background-color: #ffd700; /* Золотий колір для тегу 'NEW' */
+    color: #000;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.products-grid {
+    display: grid; /* Використання CSS Grid для сітки товарів */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Адаптивні колонки: мінімум 280px, розподіл решти простору */
+    gap: 30px; /* Проміжок між елементами сітки */
+    margin-bottom: 80px; /* Відступ перед наступною секцією */
+}
+
+.product-item {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease; /* Плавна анімація при наведенні */
+    display: flex; /* Flexbox всередині кожного елемента товару для вертикального вирівнювання */
+    flex-direction: column; /* Елементи розташовуються вертикально */
+    justify-content: space-between; /* Розподіляє простір, штовхаючи кнопку до низу */
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Зсув елемента вгору при наведенні */
+}
+
+.product-item img {
+    width: 100%;
+    height: 350px; /* Фіксована висота для зображень товарів */
+    object-fit: cover; /* Забезпечує, що зображення покриває область без спотворень */
+    border-bottom: 1px solid #333;
+    margin-bottom: 15px;
+}
+
+.product-title {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 15px; /* Проміжок над кнопкою */
+    padding: 0 10px;
+}
+
+.add-to-cart-btn {
+    background-color: #ffd700; /* Золотий колір для кнопок */
+    color: #000;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Штовхає кнопку до низу, якщо висота контенту вище змінюється */
+}
+
+.add-to-cart-btn:hover {
+    background-color: #e6c200; /* Трохи темніший золотий при наведенні */
+}
+
+/* Секція "Філософія" (переміщена та перероблена) - Використання Flexbox для розташування */
+.philosophy-section {
+    padding: 80px 0;
+    background-color: #000; /* Забезпечення чорного фону, якщо базового фону body недостатньо */
+}
+
+.philosophy-content-aligned {
+    display: flex; /* Використання Flexbox для зображення та тексту */
+    align-items: center; /* Вертикальне вирівнювання зображення та тексту */
+    gap: 50px; /* Збільшений проміжок */
+    background-color: #1a1a1a; /* Темніший фон для блоку філософії */
+    padding: 40px; /* Збільшений відступ */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    max-width: 900px; /* Обмеження ширини для відповідності прикладу */
+    margin: 0 auto; /* Центрування блоку */
+}
+
+.philosophy-img-left {
+    width: 40%; /* Налаштування ширини */
+    max-width: 350px; /* Контроль розміру зображення */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.philosophy-text-right {
+    flex: 1; /* Дозволяє тексту займати решту простору */
+    position: relative;
+    padding-left: 40px; /* Простір для іконки цитати */
+}
+
+.philosophy-text-right p {
+    font-size: 1.3em; /* Трохи більший текст */
+    line-height: 1.8;
+    font-style: italic; /* Курсив */
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-icon-big {
+    font-family: serif; /* Шрифт для іконки цитати */
+    font-size: 8em; /* Ще більша іконка цитати */
+    color: #333;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    transform: none;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+/* Секція "Оплата та Доставка" - Використання Flexbox для розташування */
+.payment-delivery-section {
+    padding: 80px 0;
+    background-color: #000;
+    margin-top: 80px; /* Відступ зверху для цієї секції */
+}
+
+.section-title-white {
+    color: #fff; /* Білий колір для основного заголовка секції */
+    font-size: 2.8em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 60px; /* Більше простору під заголовком */
+    font-weight: 700;
+}
+
+.delivery-details {
+    background-color: #1a1a1a; /* Темніший фон для блоку деталей */
+    padding: 50px; /* Великий відступ */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    max-width: 800px; /* Обмеження ширини */
+    margin: 0 auto; /* Центрування блоку */
+    display: flex; /* Використання Flexbox для управління внутрішніми секціями */
+    flex-direction: column; /* Розташування підсекцій вертикально */
+}
+
+.subsection-title {
+    color: #fff; /* Білий колір для підзаголовків */
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.subsection-title:first-child {
+    margin-top: 0; /* Без верхнього відступу для першого підзаголовка */
+}
+
+.section-text-white {
+    color: #eee; /* Трохи нечистий білий для основного тексту */
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.delivery-list-white {
+    list-style: none; /* Видалення стандартних маркерів списку */
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.delivery-list-white li {
+    color: #eee; /* Білий колір для елементів списку */
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.delivery-list-white li::before {
+    content: "•"; /* Спеціальний маркер списку */
+    color: #ffd700; /* Золотий колір для маркерів */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Футер (Footer) */
+.main-footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #000;
+    border-top: 1px solid #333;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* Адаптивний дизайн (Responsive Design) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Вертикальне розташування елементів навігації */
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5em;
+    }
+
+    .hero-subtitle {
+        font-size: 1em;
+    }
+
+    .about-us {
+        flex-direction: column; /* Вертикальне розташування контенту та зображень */
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+
+    .about-images {
+        align-items: center; /* Центрування зображень на менших екранах */
+    }
+
+    .about-main-img {
+        max-width: 100%; /* Дозволяє зображенням займати всю ширину */
+    }
+
+    /* Адаптивні налаштування для секції філософії */
+    .philosophy-content-aligned {
+        flex-direction: column; /* Вертикальне розташування зображення та тексту */
+        text-align: center;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .philosophy-img-left {
+        width: 80%; /* Налаштування ширини зображення для малих екранів */
+        max-width: 300px;
+        margin-bottom: 0; /* Без додаткового відступу, проміжок (gap) забезпечується */
+    }
+
+    .philosophy-text-right {
+        padding-left: 0; /* Видалення лівого відступу */
+    }
+
+    .quote-icon-big {
+        font-size: 6em;
+        top: -30px;
+        left: 50%; /* Центрування іконки цитати */
+        transform: translateX(-50%);
+    }
+
+    .philosophy-text-right p {
+        font-size: 1.1em;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .new-arrivals-header {
+        flex-direction: column; /* Вертикальне розташування елементів заголовка */
+        text-align: center;
+    }
+
+    .new-arrivals-header h3 {
+        font-size: 2em;
+    }
+
+    /* Адаптивні налаштування для секції "Оплата та Доставка" */
+    .section-title-white {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+
+    .delivery-details {
+        padding: 30px;
+    }
+
+    .subsection-title {
+        font-size: 1.5em;
+    }
+
+    .section-text-white, .delivery-list-white li {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9em;
+    }
+
+    .product-item img {
+        height: 300px;
+    }
+
+    .philosophy-img-left {
+        width: 100%;
+    }
+
+    .section-title-white {
+        font-size: 1.8em;
+    }
+
+    .delivery-details {
+        padding: 20px;
+    }
+}
